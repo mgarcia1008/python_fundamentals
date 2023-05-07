@@ -35,6 +35,48 @@ students = [
          {'first_name' : 'Mark', 'last_name' : 'Guillen'},
          {'first_name' : 'KB', 'last_name' : 'Tonel'}
     ]
+def iterate_dict(some_list):
+    for i in range(len(students)):
+        for key, val in some_list[i].items():
+            print(key, " - ", val)
+iterate_dict(students)
 
-for index in range(len(students)):
-    print(students[index])
+#3 Create a function iterateDictionary2(key_name, some_list) that, given a list of dictionaries
+# and a key name, the function prints the value stored in that key for each dictionary.
+students = [
+         {'first_name':  'Mindi', 'last_name' : 'Garcia'},
+         {'first_name' : 'Peter', 'last_name' : 'Garcia'},
+         {'first_name' : 'Jess', 'last_name' : 'Dunn'},
+         {'first_name' : 'Dan', 'last_name' : 'Ketcham'}
+    ]
+def besties(key_name, some_list):
+    for i in range(len(some_list)):
+                   for key, val in some_list[i].items():
+                    if key == key_name:
+                        print(val)
+besties('first_name',students)
+besties('last_name',students)
+            
+#4 Create a function printInfo(some_dict) that given a dictionary whose values 
+# are all lists, prints the name of each key along with the size of its list, and 
+# then prints the associated values within each key's list.
+dojo = {
+   'locations': ['San Jose', 'Seattle', 'Dallas', 'Chicago', 'Tulsa', 'DC', 'Burbank'],
+   'instructors': ['Michael', 'Amy', 'Eduardo', 'Josh', 'Graham', 'Patrick', 'Minh', 'Devon']
+}
+
+def print_info(coding_dojo):
+     for key, val in coding_dojo.items():
+          print(f"{len(val)} {key}")
+          for i in range(len(val)):
+              print(val[i])
+print_info(dojo)
+
+
+
+
+
+
+
+
+
