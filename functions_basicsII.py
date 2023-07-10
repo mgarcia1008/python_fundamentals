@@ -39,7 +39,7 @@ print(greater_than_second([3]))
 #return a list whose length is equal to the given size and whose values are all the given value
 def length_value(size,value):
     list=[]
-    for i in range (0, size):
+    for i in range (0, size): 
         list.append(value)
     return list
 print(length_value(3,8))

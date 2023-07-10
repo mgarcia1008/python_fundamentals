@@ -1,83 +1,108 @@
-def countdown(num):
-    new_list = []
-    for i in range(num, -1, -1):
-        new_list.append(i)
-    return new_list
+# declare a class and give it name Shoe
+class Shoe:		
+    def __init__(self):
+        self.brand = "Vans"
+        self.type = "Classic Sk8-Hi"
+        self.price = 69.99
+        self.in_stock = True
+        skater_shoe = Shoe()
+        dress_shoe = Shoe()
+        print(skater_shoe.type)
+        print(dress_shoe.type)
 
-print(countdown(8))
+fruits = ['apple', 'banana', 'orange', 'strawberry']
+vegetables = ['lettuce', 'cucumber', 'carrots']
+fruits_and_vegetables = fruits + vegetables
+print(fruits_and_vegetables)
+salad = 3 * vegetables
+print(salad)
 
-my_list = ["Thomas", "True", 10, "happy", "adrian"]
+drawers = ['documents', 'envelopes', 'pens']
+drawers[1] = 'sparkley gel pens'
+print(drawers)
+drawers.append('stamps')
+print(drawers)
 
-for ind in range (len(my_list)):
-    print(my_list [ind])
-    print(ind)
+top_contents = drawers[0]
+print(top_contents)
 
-def generic_message():
-    print("Hello there")
+'''my_list = [1, 85, 32,10,8, 100]
+my_list.reverse
+print(my_list)'''
 
-person = {"first": "Ada", "last": "Lovelace", "age": 42, "is_organ_donor": True}
-# Adds a new key value pair for email to person
-person["email"] = "alovelace@codingdojo.com"
-        
-# Changes person's "last" value to "Bobada"
-person["last"] = "Bobada"
-print(person)
+for greeting in 'hello':
+    print(greeting)
 
-countries_so_far = {"Mexico": 1, "Morocco": 1}
-new_visits = ["Albania", "Mexico", "Togo", "Morocco"]
-    
-# To add Albania to the list
-countries_so_far["Albania"] = 1
-# To add 1 to the Mexico tally
-countries_so_far["Mexico"] += 1 # Changes Mexico tally to 2!
-# your code here to finish updating your travel log!
+#could also do this
+word = 'hello'
+for greeting in word:
+    print(greeting)
 
+my_list = ['abc', '123', 'xyz']
+for example in range (len(my_list)):
+    print(example, my_list[example])
 
-person = {"first": "Ada", "last": "Lovelace", "age": 42, "is_organ_donor": True}
-print(person["first"])
-full_name = person["first"] + " " + person["last"]
-print(full_name)
+countries = ["Uganda", "Chile", "Albania", "Saudi Arabia"]
 
-print(len(person))
-print(str(person))
+for integer in range(len(countries)):
+    print("Index", integer)
+    # Challenge 2: print the index here
+    print("Country:", countries[integer])
+    # Challenge 3: print the country here
+ 
+# Looping over values only...
+for country in countries:
+    print("Country", country)
+    # Challenge 4: print the country here
 
+#for loop
+for count in range(0,5):
+    print("looping =", count)
 
-print(person.get("email"))
-print(person.get("email", "mgarciagmail.com"))
-print(person)
+#while loop
+count = 0
+while count <= 5:
+    print("looping - ", count)
+    count += 1
 
-my_dict = {"name": "Noelle", 
-           "language": "Python"
-           }
-for each_key in my_dict:
-    print(my_dict[each_key])
+#else statement
+y = 3
+while y > 0:
+    print(y)
+    y = y - 1
+else:
+    print("Final else statement")
 
-capitals = {"Washington":"Olympia","California":"Sacramento","Idaho":"Boise","Illinois":"Springfield","Texas":"Austin","Oklahoma":"Oklahoma City","Virginia":"Richmond"}
-# another way to iterate through the keys
-for key in capitals.keys():
-     print(key)
-# output: Washington, California, Idaho, Illinois, Texas, Oklahoma, Virginia
-#to iterate through the values
-for val in capitals.values():
-     print(val)
-# output: Olympia, Sacramento, Boise, Springfield, Austin, Oklahoma City, Richmond
-#to iterate through both keys and values
+def add (a,b):
+    x = a + b
+    return x
+sum1 = add(4,6)
+sum2 = add(1,4)
+sum3 = sum1 + sum2
+
+print(sum1)
+print(sum2)
+print(sum3)
+
+def multiply(num_list, num):
+    for x in range(len(num_list)):
+        num_list[x] *= num
+    return num_list
+
+a = [2,4,10,16]
+b = multiply(a,5)
+print(b)
+
+capitals = {"Washington":"Olympia",
+            "California":"Sacramento",
+            "Idaho":"Boise",
+            "Illinois":"Springfield",
+            "Texas":"Austin",
+            "Oklahoma":"Oklahoma City",
+            "Virginia":"Richmond"
+            }
 for key, val in capitals.items():
-     print(key, " = ", val)
-# output: Washington = Olympia, California = Sacramento, Idaho = Boise, etc
-
-"""
-This Length, That Value - Write a function that accepts two integers as parameters: size and value. The function should create and return a list whose length is equal to the given size, and whose values are all the given value.
-Example: length_and_value(4,7) should return [7,7,7,7]
-Example: length_and_value(6,2) should return [2,2,2,2,2,2]"""
-
-def replicate_value(size_of_list, value_to_insert):
-    new_list = []
-    for this_value in range(size_of_list):
-        new_list.append(value_to_insert)
-    return new_list
-
-print(replicate_value(4,7))
+    print(key, '=', val)
 
 # List of dictionaries
 users = [
@@ -94,7 +119,20 @@ resume_data = {
     #                0              1
     "hobbies":["rock climbing", "knitting"]
 }
-
-
 print(resume_data["skills"][1])
-print(users)
+print(users[2]["first"])
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
